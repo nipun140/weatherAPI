@@ -22,7 +22,7 @@ function showPosition(position) {
     alertBox.style.display = 'none';
 
     //fetchAPI
-    fetch(`http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=1c6c7f1ade86699b29702d4240d16803`)
+    fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${long}&units=metric&appid=1c6c7f1ade86699b29702d4240d16803`)
         .then(response => response.json())
         .then(tempData => {
 
