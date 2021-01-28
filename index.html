@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather API</title>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-8 col-sm-offset-2">
+                <h1>Welcome to Weather API</h1>
+                <button onclick="getLocation()" class="btn btn-lg  btn-success">Click</button>
+                <br>
+                <br>
+                <br>
+                <div class="alert alert-danger">
+                    <strong>Warning!</strong>
+                    <span class="" id="message"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container weatherCon">
+        <!-- <div class="box">
+            <h2 id="city">
+                <sup id="country"></sup>
+            </h2>
+            <p id="temp"></p>
+            <img id="icon" src="" alt="img" />
+            <p id="desc"></p>
+        </div> -->
+    </div>
+
+    <footer>
+        Made with Love
+    </footer>
+    <script src="index.js"></script>
+</body>
+
+</html>

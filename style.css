@@ -1,0 +1,109 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: url('img/sky.jpg') no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    width: 100vw;
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 20px;
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    text-shadow: 3px 3px 2px #0b08fb;
+    margin-top: 50px;
+}
+
+footer {
+    text-align: center;
+    font-size: 18px;
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.col-sm-8 {
+    text-align: center;
+}
+
+.alert {
+    display: none;
+}
+
+.weatherCon {
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+.box {
+    width: 30%;
+    margin: auto;
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 40px;
+    position: relative;
+}
+
+@media (max-width:900px) {
+    .box {
+        width: 60%;
+    }
+}
+
+@media (max-width:450px) {
+    .box {
+        width: 80%;
+    }
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    backdrop-filter: blur(8px) saturate(100%) contrast(45%) brightness(130%) !important;
+    border-radius: 50px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.418);
+    animation: show 1.5s forwards;
+    opacity: 0;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.box h2 sup {
+    background-color: yellow;
+    padding: 0px 8px;
+    border-radius: 10px;
+}
+
+.box img {
+    width: 40%;
+}
+
+.box #temp {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.box #desc {
+    font-size: 25px;
+    margin: 20px 0px;
+}
