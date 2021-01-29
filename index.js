@@ -15,6 +15,13 @@ function getLocation() {
     }
 }
 
+// show time 
+setInterval(() => {
+    var currentTime = new Date();
+    var currentTimeString = currentTime.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+    document.getElementById('time').innerHTML = currentTimeString;
+}, 1000);
+
 //show position function
 function showPosition(position) {
     let lat = position.coords.latitude;
@@ -31,15 +38,18 @@ function showPosition(position) {
             let temp = tempData.main.temp;
             let country = tempData.sys.country;
             let city = tempData.name;
+
+
             document.querySelector('.weatherCon').innerHTML =
                 `
                 <div class="box">
                     <h2 id="city">${city}
                         <sup id="country">${country}</sup>
                     </h2>
-                    <p id="temp">${temp}</p>
+                    <p id="temp">${temp}&#8451;</p>
                     <img id="icon" src="img/${icon}.png" alt="img" />
                     <p id="desc">${desc}</p>
+                    <p id='time'></p>
                 </div>
             `;
 

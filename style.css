@@ -107,3 +107,7 @@ footer {
     font-size: 25px;
     margin: 20px 0px;
 }
+
+.box #time {
+    font-size: 20px;
+}
